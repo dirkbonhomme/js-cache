@@ -1,0 +1,32 @@
+{
+  "name": "js-cache",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Caching library supporting timeouts, events and external datasources",
+  "keywords": [
+    "cache",
+    "memory",
+    "event"
+  ],
+  "author": "Dirk Bonhomme <dirk@bytelogic.be>",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dirkbonhomme/js-cache"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "dependencies": {
+    "infinite-timeout": "*",
+    "backbone-events-standalone": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*",
+    "sinon": "*"
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
