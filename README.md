@@ -1,10 +1,10 @@
 # Caching library for JavaScript and Node.js
 
-...
+Soon..
 
 ## Usage in Node.js  
 
-...
+Soon..
 
 ## Usage in browsers
 
