@@ -58,26 +58,20 @@ Cache data or update and existing record.
 
 ### cache.get(`key`, `[callback]`)
 
-Get cached value.
+Get cached value. Returns cached value (or undefined) if no callback was provided. Always returns undefined if callback argument is present.
 
-`key` Key identifying the cache
+`key` Key identifying the cache  
 `callback` Return value in callback if record exists in memory or on external resource (optional)
-
-Returns cached value (or undefined) if no callback was provided. Always returns undefined if callback argument is present.
 
 ### cache.del(`key`)
 
-Delete cached data.
+Delete cached data. Returns true if the record existed, false if not.
 
 `key` Key identifying the cache
 
-Returns true if the record existed, false if not.
-
 ### cache.clear()
 
-Clear all cached data.
-
-Returns number of cleared records.
+Clear all cached data. Returns number of cleared records.
 
 ### cache.size()
                 
