@@ -214,6 +214,23 @@ describe('Cache', function(){
                 expect(cache1.size()).to.be(2);
             });
         });
+
+        describe('#debug', function(){
+            it('should return empty object after init', function(){
+                var cache1 = new cache();
+                expect(cache1.debug()).to.eql({});
+            });
+
+            it('should return internal cache', function(){
+                cache1.set('lorem', 'ipsum');
+                cache1.set('foo', 'bar', 123);
+                var result = cache1.debug();
+                expect(Object.keys(result)).to.eql(['lorem', 'foo']);
+                expect(result.lorem.value).to.be('ipsum');
+                expect(result.foo.value).to.be('bar');
+                expect(result.foo).to.have.property('timeout');
+            });
+        });
     });
 
     describe('Timeouts', function(){

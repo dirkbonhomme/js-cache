@@ -1,6 +1,6 @@
 {
   "name": "js-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Caching library supporting timeouts, events and external data sources",
   "keywords": [
@@ -15,7 +15,10 @@
     "url": "git://github.com/dirkbonhomme/js-cache"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "make test",
+    "blanket": {
+      "pattern": "lib/cache.js"
+    }
   },
   "dependencies": {
     "infinite-timeout": "*",
@@ -24,7 +27,8 @@
   "devDependencies": {
     "mocha": "*",
     "expect.js": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "blanket": "*"
   },
   "engines": {
     "node": ">=0.8"
