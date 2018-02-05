@@ -81,6 +81,10 @@ Returns number of cached records.
 
 Returns internal object with cached records.
 
+### cache.keys()
+
+Returns list of cached record keys.
+
 ## External data source
 
 It is possible to forward api requests to external handlers. They can be used for logging, storing in persistent database etc. The cache library will function as a temporary, in-memory layer.

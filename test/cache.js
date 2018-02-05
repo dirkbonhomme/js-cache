@@ -231,6 +231,22 @@ describe('Cache', function(){
                 expect(result.foo).to.have.property('timeout');
             });
         });
+
+        describe('#keys', function(){
+            it('should return empty array after init', function(){
+                var cache1 = new cache();
+                expect(cache1.keys()).to.eql([]);
+            });
+
+            it('should return list of keys', function(){
+                cache1.set('lorem', 'ipsum');
+                cache1.set('foo', 'bar');
+                cache1.set('santa', 'claus');
+                cache1.del('foo');
+                var result = cache1.keys();
+                expect(result).to.eql(['lorem', 'santa']);
+            });
+        });
     });
 
     describe('Timeouts', function(){
