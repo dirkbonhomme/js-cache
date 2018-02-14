@@ -1,6 +1,6 @@
 {
   "name": "js-cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "Caching library supporting timeouts, events and external data sources",
   "keywords": [
